@@ -32,16 +32,26 @@ header h1 {
 
 .link-header nav ul li a {
   text-decoration: none;
+  color: black;
+}
+
+.link-header nav ul li a:hover {
+  text-decoration: underline;
+  color: blue;
 }
 
 footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0px;
-  text-align: center;
+  text-align: right;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.footer-text {
+  margin-right: 5%;
 }
 
 main {
@@ -76,12 +86,22 @@ label {
   margin-bottom: 5px;
 }
 
+.input-normal {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .input-textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  height: 100px;
+  resize: none;
 }
 
 .button-submit {
@@ -101,7 +121,7 @@ label {
 }
 
 .form-container {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 body {
