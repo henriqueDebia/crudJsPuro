@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Produtos</h1>
+      <div class="link-header">
+        <nav>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2>Cadastro de Produto</h2>
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              class="input-textarea"
+            />
+          </div>
+          <div class="form-group">
+            <label for="preco">Preço</label>
+            <input
+              type="number"
+              id="preco"
+              name="preco"
+              required
+              class="input-textarea"
+            />
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input
+              type="text"
+              id="descricao"
+              name="descricao"
+              required
+              class="input-textarea"
+            />
+          </div>
+          <button type="submit" class="button-submit">Cadastrar</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Minha Página. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
