@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Listagem</title>
+  </head>
+  <body>
+    <header>
+      <h1>Listagem de Produtos</h1>
+      <div class="link-header">
+        <nav>
+          <ul>
+            <li><a href="./cadastro.html">Cadastro</a></li>
+            <li><a href="./produtos.html">Produtos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Listagem</h1>
+      <div class="list-container">
+        <ul id="data-list" class="item-list"></ul>
+      </div>
+    </main>
+
+    <footer>
+      <p class="footer-text">&copy; Contato: henrique.debia1@gmail.com</p>
+    </footer>
+    <script>
+      const mockedData = [
+        { id: 1, name: "Item 1", price: 29.99, description: "item muito bom" },
+        { id: 2, name: "Item 2", price: 29.99, description: "item muito bom" },
+        {
+          id: 3,
+          name: "Item 3",
+          price: 29.99,
+          description: "item muito bom, demaize",
+        },
+      ];
+
+      const dataList = document.getElementById("data-list");
+      mockedData.forEach((item) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("item");
+
+        const namePriceContainer = document.createElement("div");
+        namePriceContainer.classList.add("name-price-container");
+
+        const nameLine = document.createElement("p");
+        nameLine.textContent = item.name;
+
+        const priceLine = document.createElement("p");
+        priceLine.textContent = `R$ ${item.price}`;
+
+        namePriceContainer.appendChild(nameLine);
+        namePriceContainer.appendChild(priceLine);
+
+        const descriptionLine = document.createElement("p");
+        descriptionLine.textContent = item.description;
+
+        listItem.appendChild(namePriceContainer);
+        listItem.appendChild(descriptionLine);
+
+        dataList.appendChild(listItem);
+      });
+    </script>
+  </body>
+</html>
